@@ -1,8 +1,108 @@
 :root {
 	--main-bg-color: beige;
 	--main-font-color: #444444;
+	--faded-black: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s;
 }
 
 html {
+	width: 100%;
+	height: 100%;
+
 	font-size: 16px;
+	font-family: monospace, sans-serif;
+}
+
+/* mobile-first */
+/* general items */
+
+body {
+	width: 98vw;
+	height: 100%;
+	margin: auto;
+
+	position: relative;
+
+	background: var(--main-bg-color);
+	color: var(--main-font-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+	width: 100%;
+	display: block;
+	margin-bottom: 1rem;
+
+	position: absolute;
+	bottom: 0;
+ 	left: 0;
+
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+/* specific items */
+
+nav {
+	display: flex;
+	flex-direction: column;
+}
+
+nav,
+article#introduction {
+	padding-top: 1rem;
+}
+
+nav > * {
+	flex: 1;
+}
+
+nav > h3#greeting {
+	flex: 3;
+}
+
+nav > p:last-child {
+	text-align: right;
+}
+
+ul.sl-item-list {
+	margin-top: 0.5rem;
+}
+
+ul.sl-item-list > li {
+	padding: 0.2rem 0.5rem;
+	border: 0.5px solid var(--faded-black);
+}
+
+ul.sl-item-list > li:not(:last-child) {
+	border-bottom: none;
+}
+
+/* desktop */
+/* let's see how it works with only this */
+@media (min-width: 961px) {
+	body {
+		width: 900px;
+	}
+
+	nav {
+		flex-direction: row;
+	}
 }
