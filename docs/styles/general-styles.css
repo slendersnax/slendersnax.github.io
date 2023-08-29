@@ -1,0 +1,8 @@
+:root {
+	--main-bg-color: beige;
+	--main-font-color: #444444;
+}
+
+html {
+	font-size: 16px;
+}
