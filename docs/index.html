@@ -5,29 +5,49 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	    <link rel="stylesheet" href="general-styles.css">
+	    <style>
+	    	#khajiit {
+	    		text-align: center;
+	    		margin-top: 1rem;
+	    	}
+	    </style>
 
 	    <title>Home - slendersnax.io</title>
 	</head>
 	<body>
-		<nav>
-			<h3 id="greeting">Welcome</h3>
-		</nav>
-		<hr/>
-		<main>
-			<article id="introduction">
-				I don't know how you got here or why, but since you're here anyway why not check out one of these links: 
-				<ul class="sl-item-list">
-					<li><a href="pages/programming-articles.html">Programming Articles</a></li>
-					<li><a href="pages/non-programming-articles.html">Non-programming Articles</a></li>
-					<li><a href="pages/both-misc.html">"Both? Both. Both is good." - I'm not sure what to label these</a></li>
-					<li><a href="https://github.com/slendersnax">GitHub Profile</a></li>
-					<li><a href="https://www.linkedin.com/in/abel-orban-00372a1b8">LinkedIn Profile</a></li>
-					<li><a href="pages/both_misc/why-no-traditional-navbar.html">"Why didn't you create a traditional Navigation Bar though?"</a></li>
-				</ul>
-			</article>
-		</main>
-		<footer>
-			&copy; Copyright 2024 - 2169 slendersnax
-		</footer>
+		<input type="checkbox" id="dark"/>
+		<div id="inner-body">
+			<div id="main-container">
+				<nav>
+					<h3 class="greeting">Welcome</h3>
+					<p>
+						<label for="dark">
+							<span>Dark</span>
+						</label>
+					</p>
+				</nav>
+				<hr/>
+				<main>
+					<article id="introduction">
+						<p>Hello, I'm Abel. I like to code, play games, find explanations for things, and write.</p>
+						<p>I also like cats, hikes, solving problems, and websites that look nice.</p>
+						<p>For a more in-depth presentation and to see what I'm doing right now(ish), check out this page that's <a href="about-me.html">about me</a>. Otherwise, browse away.</p>
+						<p id="khajiit"><a href="https://knowyourmeme.com/memes/khajiit-khajiit-has-wares">Khajiit has wares (articles) if you have coin (interest).</a></p>
+						<ul class="sl-item-list">
+							<li><a href="pages/programming-articles.html">Programming Articles</a></li>
+							<li><a href="pages/non-programming-articles.html">Non-programming Articles</a></li>
+							<li><a href="pages/both-misc.html">"Both? Both. Both is good." - I'm not sure what to label these</a></li>
+							<li><a href="https://github.com/slendersnax">GitHub Profile</a></li>
+							<li><a href="https://www.linkedin.com/in/abel-orban-00372a1b8">LinkedIn Profile</a></li>
+							<li id="dark-user-article"><a href="pages/programming/why-dark-btn-not-working.html">"Why doesn't the 'Dark' button do anything for me?"</a></li>
+						</ul>
+						<p>P.S. I made this site in August 2023 and as of writing this (still August 2023) I'm very new to any kind of blogging, so I apologize for any rough edges that the articles may have.</p>
+					</article>
+				</main>
+				<footer>
+					&copy; Copyright 2024 - 2169 Abel Orban
+				</footer>
+			</div>
+		</div>
 	</body>
 </html>

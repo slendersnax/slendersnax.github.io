@@ -2,7 +2,12 @@
 	--main-bg-color: beige;
 	--main-font-color: #444444;
 	--faded-black: rgba(0, 0, 0, 0.2);
+
+	--dark-bg-color: #37322d;
+	--dark-font-color: #ccc;
 }
+
+/* setting up the whole page */
 
 * {
     margin: 0;
@@ -19,30 +24,57 @@ html {
 	font-family: monospace, sans-serif;
 }
 
+input {
+	display: none;
+}
+
 /* mobile-first */
-/* general items */
+/* simple tags */
 
 body {
-	width: 98vw;
+	width: 100%;
 	height: 100%;
-	margin: auto;
-
 	position: relative;
+}
+
+/* adaptation for css-only dark mode */
+body > #inner-body {
+	width: 100%;
+	height: 100%;
+
+	overflow-y: scroll;
 
 	background: var(--main-bg-color);
 	color: var(--main-font-color);
 }
 
+body > #inner-body > #main-container {
+	width: 98vw;
+	height: 100%;
+	margin: auto;
+}
+
+/* simple tags - continued */
 a {
     text-decoration: none;
+    color: rgb(0, 0, 238);
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
-ul {
-    list-style: none;
+ul.classic-ul {
+	list-style-type: disc;
+	padding-left: 2.5em;
+}
+
+ul.classic-ul > li {
+	padding: initial;
+}
+
+details {
+	background: rgba(0, 0, 0, .1);
 }
 
 footer {
@@ -58,14 +90,14 @@ footer {
 	text-align: center;
 }
 
-/* specific items */
+/* navigation bar(s) */
 
 nav {
 	display: flex;
 	flex-direction: column;
 }
 
-nav,
+nav:first-child,
 article#introduction {
 	padding-top: 1rem;
 }
@@ -74,7 +106,7 @@ nav > * {
 	flex: 1;
 }
 
-nav > h3#greeting {
+nav > h3.greeting {
 	flex: 3;
 }
 
@@ -82,8 +114,38 @@ nav > p:last-child {
 	text-align: right;
 }
 
+nav > p > label {
+	display: flex;
+	width: 100%;
+	text-align: right;
+	-webkit-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;      
+	user-select: none;
+}
+
+nav > p > label:hover {
+	cursor: pointer;
+}
+
+/* x when light mode is enable, tick when dark mode is enabled */
+nav > p > label::before {
+	content: "\2715";
+	color: red;
+	flex: 18;
+}
+
+nav > p > label > span {
+	padding-top: 0.1rem;
+	flex: 1;
+}
+
+/* article lists */
+
 ul.sl-item-list {
+	list-style: none;
 	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 ul.sl-item-list > li {
@@ -91,18 +153,65 @@ ul.sl-item-list > li {
 	border: 0.5px solid var(--faded-black);
 }
 
-ul.sl-item-list > li:not(:last-child) {
-	border-bottom: none;
+ul.sl-item-list > li:not(:first-child) {
+	border-top: none;
+}
+
+ul.sl-item-list > li#dark-user-article {
+	display: none;
+}
+
+/* dark mode rule */
+@media (prefers-color-scheme: dark) {
+	body > #inner-body {
+		background: var(--dark-bg-color);
+		color: var(--dark-font-color);
+	}
+
+	a {
+		color: #1aa0cb;
+	}
+
+	details {
+		background: rgba(0, 0, 0, .2);
+	}
+
+	ul.sl-item-list > li#dark-user-article {
+		display: block;
+	}
+}
+
+input:checked ~ #inner-body {
+	background: var(--dark-bg-color);
+	color: var(--dark-font-color);
+}
+
+input:checked ~ #inner-body a {
+	color: #1aa0cb;
+}
+
+input:checked ~ #inner-body nav > p > label::before {
+	content: "\2713";
+	color: green;
+	flex: 18;
 }
 
 /* desktop */
 /* let's see how it works with only this */
 @media (min-width: 961px) {
-	body {
+	body > #inner-body > #main-container {
 		width: 900px;
 	}
 
 	nav {
 		flex-direction: row;
+	}
+
+	nav > p > label::before {
+		flex: 4;
+	}
+
+	input:checked ~ #inner-body nav > p > label::before {
+		flex: 4;
 	}
 }
