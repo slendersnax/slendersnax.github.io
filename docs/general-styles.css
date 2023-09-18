@@ -20,8 +20,9 @@ html {
 	width: 100%;
 	height: 100%;
 
-	font-size: 16px;
+	font-size: 12px;
 	font-family: monospace, sans-serif;
+	line-height: 2em;
 }
 
 input {
@@ -49,7 +50,7 @@ body > #inner-body {
 }
 
 body > #inner-body > #main-container {
-	width: 98vw;
+	width: 94vw;
 	height: 100%;
 	margin: auto;
 }
@@ -197,6 +198,11 @@ input:checked ~ #inner-body nav > p > label::before {
 /* desktop */
 /* let's see how it works with only this */
 @media (min-width: 961px) {
+	html {
+		font-size: 16px;
+		line-height: 1.7em;
+	}
+
 	body > #inner-body > #main-container {
 		width: 900px;
 	}
