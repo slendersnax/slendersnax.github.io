@@ -35,10 +35,11 @@
 				<main>
 					<article id="introduction">
 						<p>Hello, I'm Abel. Nice to meet you!</p>
-						<p>I don't really know where to start, but below you can find a timeline / summary of my professional career.</p>
+						<p>Below you can find a summary / timeline of my professional career and further down a section with my side projects.</p>
 						<details>
 							<summary>Please note...</summary>
 							<p>...that I don't profess <em>extreme</em> proficiency with any of the technologies found below, at the moment I'm still trying to figure out what to specialise in. As a general rule, I prefer C++ and Python for desktop application development and Vanilla JavaScript for web development.</p>
+							<br/>
 							<p>The technologies are listed from most used to least used.</p>
 						</details>
 						<ul class="sl-item-list">
@@ -54,7 +55,7 @@
 							</li>
 							<li id="first">
 								<p><b>2021 June - November:</b> Application Developer <b>@</b> Atos.</p>
-								<p><b>Technologies:</b> Linux CLI, C++, Python, Bash, Confluence, Jira.</p>
+								<p><b>Technologies:</b> Linux CLI, C++, Python, Bash, Git, Confluence, Jira.</p>
 								<p>The techinal interview went well, and the first couple of weeks as well. However, it became clear to me that mentally I wasn't ready for this job yet. </p>
 								<details>
 									<summary>Why, you ask?</summary>
@@ -72,6 +73,42 @@
 									<p>It took me some time to recall that we had pre- and post-installation files and that I should look there instead of the source files. Upon finding where the message came from, I had to ask for some help from my manager, something which I was trying to avoid. It didn't take him too long to realise what was going on and then help me understand the problem enough that I was able to fix it.</p>
 									<p>Looking back a it, this was a great learning experience. But at that moment all I could think was that I should have been able to solve that alone.</p>
 								</details>
+							</li>
+						</ul>
+						<h3>Notable side projects (with helpful indicators about how complete I consider them to be)</h3>
+						<ul class="sl-item-list">
+							<li>
+								<label for="proj-personal-site"><b>Personal site (this one)</b> - active development:</label>
+								<progress id="proj-personal-site" max="100" value="90">90%</progress>
+								<p><b>Technologies:</b> Vanilla JS, CSS3, HTML5</p>
+								<p>I started working on this in August 2023 almost purely because having my own site really appeals to me. It's fully functional as it is right now, but I want to add a few quality-of-life improvements like dark mode persistence using the LocalStorage API.</p>
+							</li>
+							<li>
+								<label for="proj-personal-weatherapp"><b>Personal weather app</b> - active development(?) | React Native</label>
+								<progress id="proj-personal-weatherapp" max="100" value="40">40%</progress>
+								<p><b>Technologies:</b> React Native, OpenWeather API</p>
+								<p>In all honesty, I'm kind of bored with this one. The purpose was to learn how to use React Native and an API (the OpenWeather one in this case), but it's been dragging on for more than a month. On one hand, it would be a great show of discipline if I could finish it. On the other...I can learn about these technologies with a project that I actually need / want.</p>
+							</li>
+							<li>
+								<label for="proj-slr-local-db"><b><a href="https://github.com/slendersnax/slr-local-db">slr-local-db</a></b> - complete(ish) / permanent hiatus:</label>
+								<progress id="proj-slr-local-db" max="100" value="100">100%</progress>
+								<p><b>Technologies:</b> Vanilla JS</p>
+								<p>I really like persistent storage. At some point in the near future, I will implement a short script in this site to store the dark mode preference of the user, because I would love to have that as a user of any site.</p>
+								<p>This uses the LocalStorage API and its structure is based on absolutely nothing but intuition, trial and error, and revisions. If it had been a serious project developed for a specific purpose, I would have researched the hell out of the 'why'-s and 'how'-s of normal database languages. (I have only used MySQL and SQLite so far, but I'm curious about other ones too.)</p>
+								<p>As it is, it was fun to work on this and it's very useable (imo).</p>
+							</li>
+							<li>
+								<label for="proj-battleship"><b><a href="https://github.com/slendersnax/battleship">Battleship</a></b> - complete(ish):</label>
+								<progress id="proj-battleship" max="100" value="99">99%</progress>
+								<p><b>Technologies:</b> C++, SFML</p>
+								<p>I like to make games, although for the moment I don't have any original ones. I do have several (relatively) lightweight clones of popular games, though, all of them in the same state as this one: done, with a few quality-of-life things missing, and in need of code refactoring.</p>
+								<p>Others include:
+									<ul class="classic-ul">
+										<li><a href="https://github.com/slendersnax/arch-minesweeper-sfml">Minesweeper</a> using the same technologies (this one is actually complete)</li>
+										<li><a href="https://github.com/slendersnax/python-2048">2048</a> using Python</li>
+										<li><a href="https://github.com/slendersnax/spider-solitaire-py">Spider Solitaire</a> but in the console, using Python</li>
+									</ul>
+								</p>
 							</li>
 						</ul>
 					</article>
