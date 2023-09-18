@@ -135,7 +135,6 @@ nav > p > label::before {
 }
 
 nav > p > label > span {
-	padding-top: 0.1rem;
 	flex: 1;
 }
 
@@ -212,7 +211,7 @@ input:checked ~ #inner-body nav > p > label::before {
 	}
 
 	nav > p > label::before {
-		flex: 4;
+		flex: 5;
 	}
 
 	footer {
@@ -222,6 +221,6 @@ input:checked ~ #inner-body nav > p > label::before {
 	}
 
 	input:checked ~ #inner-body nav > p > label::before {
-		flex: 4;
+		flex: 5;
 	}
 }
