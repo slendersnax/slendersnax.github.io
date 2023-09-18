@@ -21,7 +21,7 @@ html {
 	height: 100%;
 
 	font-size: 12px;
-	font-family: monospace, sans-serif;
+	font-family: sans-serif;
 	line-height: 2em;
 }
 
@@ -199,7 +199,7 @@ input:checked ~ #inner-body nav > p > label::before {
 /* let's see how it works with only this */
 @media (min-width: 961px) {
 	html {
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.7em;
 	}
 
