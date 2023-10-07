@@ -138,6 +138,12 @@ nav > p > label > span {
 	flex: 1;
 }
 
+.img-container > img {
+	display: block;
+	max-width: 100%;
+	margin: 1em auto;
+}
+
 /* article lists */
 
 ul.sl-item-list {
@@ -151,8 +157,8 @@ ul.sl-item-list > li {
 	border: 2px solid var(--faded-black);
 }
 
-ul.sl-item-list > li:not(:first-child) {
-	border-top: none;
+ul.sl-item-list > li:not(:last-child) {
+	border-bottom: none;
 }
 
 ul.sl-item-list > li#dark-user-article {
@@ -218,6 +224,10 @@ input:checked ~ #inner-body nav > p > label::before {
 		position: absolute;
 		bottom: 0;
 		left: 0;
+	}
+
+	.img-container > img {
+		max-width: 50%;
 	}
 
 	input:checked ~ #inner-body nav > p > label::before {
