@@ -35,14 +35,15 @@
 				</nav>
 				<hr/>
 				<nav>
-					<p class="date">2023. Sept. 7th</p>
+					<h3 class="greeting"></h3>
 					<p>
 						<a href="../programming-articles.html">Prog. Art.</a>
 						<a href="../../index.html">Home</a>
 					</p>
 				</nav>
 				<main>
-					<article id="introduction">
+					<article id="post">
+						<p class="art-date">Uploaded on 2023 Sept. 7th</p>
 						<details>
 							<summary>Long story short</summary>
 							<p>I used a media query to check if a user <code>prefers-color-scheme: dark</code> but didn't integrate it into the pure CSS light / dark mode switcher (made using <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked#toggling_elements_with_a_hidden_checkbox">:checked</a></code> tomfoolery).</p>
@@ -53,10 +54,13 @@
 							<p>Just FYI, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked#toggling_elements_with_a_hidden_checkbox">I didn't come up with this myself</a> (also if you want you can check out the page structure with the DevTools and see if you can figure it out by yourself first).</p>
 							<details>
 								<summary>The Method and The Issue</summary>
-								<p>I have <em>almost</em> all the contents of the page wrapped in two divs, which are needed for mobile responsiveness and dark mode. There's a <code>&lt;checkbox&gt;</code> on the same level as the first div, which means that with the <code>:checked</code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator">~</a></code> selectors we can change the whole page's style based on whether the checkbox is checked or not.</p>
-								<p>However, I also didn't want to blind anyone who <code>prefers-color-scheme: dark</code>, so I made a media query for that. But because the condition for this query is always <em>true</em>, it won't take into account the checkbox and stay in dark mode.</p>
-								<p>There are workarounds for this, and I'm planning on implementing one of them - this sounds cool, but I unless I figure out a way to do it more elegantly I will just copy the light / dark switcher CSS into the media query.</p>
+								<p class="post-paragraph">I have <em>almost</em> all the contents of the page wrapped in two divs, which are needed for mobile responsiveness and dark mode. There's a <code>&lt;checkbox&gt;</code> on the same level as the first div, which means that with the <code>:checked</code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator">~</a></code> selectors we can change the whole page's style based on whether the checkbox is checked or not.</p>
+
+								<p class="post-paragraph">However, I also didn't want to blind anyone who <code>prefers-color-scheme: dark</code>, so I made a media query for that. But because the condition for this query is always <em>true</em>, it won't take into account the checkbox and stay in dark mode.</p>
+
+								<p class="post-paragraph">There are workarounds for this, and I'm planning on implementing one of them - this sounds cool, but I unless I figure out a way to do it more elegantly I will just copy the light / dark switcher CSS into the media query.</p>
 								<p>I could also (and might):</p>
+								
 								<ul class="classic-ul">
 									<li>use JavaScript to click the checkbox if the user prefers dark mode</li>
 									<li>hack around until I find a way to activate the checkbox with pure CSS as well based on a media query</li>
@@ -67,7 +71,7 @@
 					</article>
 				</main>
 				<footer>
-					&copy; Copyright 2024 - 2169 Abel Orban
+					&copy; Copyright 2023 - 2169 Abel Orban
 				</footer>
 			</div>
 		</div>

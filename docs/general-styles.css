@@ -1,7 +1,9 @@
 :root {
 	--main-bg-color: beige;
 	--main-font-color: #444444;
-	--faded-black: rgba(0, 0, 0, 0.2);
+	--very-faded-black: rgba(0, 0, 0, 0.2);
+	--faded-black: rgba(0, 0, 0, 0.5);
+	--faded-white: rgba(255, 255, 255, 0.5);
 
 	--dark-bg-color: #37322d;
 	--dark-font-color: #ccc;
@@ -89,6 +91,29 @@ footer {
 	text-align: center;
 }
 
+.art-date {
+	color: var(--faded-black);
+}
+
+.post-paragraph {
+	margin-bottom: 1rem;
+}
+
+.post-note {
+	padding: 10px;
+  	border: 1px solid #aaa;
+  	border-radius: 10px;
+  	font-size: 0.8rem;
+}
+
+.post-note::before {
+	content: "Note: ";
+}
+
+article#post > .art-date {
+	margin-bottom: 1rem;
+}
+
 /* navigation bar(s) */
 
 nav {
@@ -97,7 +122,7 @@ nav {
 }
 
 nav:first-child,
-article#introduction {
+article#post {
 	padding-top: 1rem;
 }
 
@@ -127,7 +152,7 @@ nav > p > label:hover {
 	cursor: pointer;
 }
 
-/* x when light mode is enable, tick when dark mode is enabled */
+/* x when light mode is enabled, tick when dark mode is enabled */
 nav > p > label::before {
 	content: "\2715";
 	color: red;
@@ -154,7 +179,7 @@ ul.sl-item-list {
 
 ul.sl-item-list > li {
 	padding: 0.2rem 0.5rem;
-	border: 2px solid var(--faded-black);
+	border: 2px solid var(--very-faded-black);
 }
 
 ul.sl-item-list > li:not(:last-child) {
@@ -183,6 +208,10 @@ ul.sl-item-list > li#dark-user-article {
 	ul.sl-item-list > li#dark-user-article {
 		display: block;
 	}
+
+	.art-date {
+		color: var(--faded-white);
+	}
 }
 
 input:checked ~ #inner-body {
@@ -198,6 +227,10 @@ input:checked ~ #inner-body nav > p > label::before {
 	content: "\2713";
 	color: green;
 	flex: 18;
+}
+
+input:checked ~ #inner-body .art-date {
+	color: var(--faded-white);
 }
 
 /* desktop */

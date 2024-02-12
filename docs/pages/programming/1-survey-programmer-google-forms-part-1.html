@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-GB">
+	<head>
+	    <meta charset="utf-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	    <link rel="stylesheet" href="../../general-styles.css">
+	    <style>
+	    	footer {
+	    		position: initial;
+	    	}
+	    </style>
+
+	    <title>Survey Programmer Gripes</title>
+	</head>
+	<body>
+		<input type="checkbox" id="dark"/>
+		<div id="inner-body">
+			<div id="main-container">
+				<nav>
+					<h3 class="greeting">A look at Google Forms as a Survey Programmer - Part 1</h3>
+					<p>
+						<label for="dark">
+							<span>Dark</span>
+						</label>
+					</p>
+				</nav>
+				<hr/>
+				<nav>
+					<h3 class="greeting"></h3>
+					<p>
+						<a href="../programming-articles.html">Prog. Art.</a>
+						<a href="../../index.html">Home</a>
+					</p>
+				</nav>
+				<main>
+					<article id="post">
+						<p class="art-date">Uploaded on 2024 Feb. 12th</p>
+
+						<p class="post-paragraph">This is the first part of a series of articles where we'll be taking a look at Google Forms and create a survey from the ground up using it. We'll be doing this because I'm curious about Google Forms on its own and compared to the tools used at my job, and because I've noticed a few errors made by students who were using Google Forms to gather data for their theses. Whoever you are though, I hope what you read here will help you :).</p>
+
+						<p><b>A couple of disclaimers:</b></p>
+						<ul class="classic-ul post-paragraph">	
+							<li>this is my <i>first</i> time using Google Forms</li>
+							<li>I haven't learned how to structure questionnaires or even what questions to use depending on the questionnaire's purpose. I may look into that in the future, but my advice here is based only on intuition and two years of experience</li>
+						</ul>
+
+						<p class="post-paragraph">So let's get into it - the subject of this questionnaire? Pets.</p>
+
+						<h3 class="post-paragraph">part 1 - the screener / screening section</h3>
+
+						<p>I just created a blank Form, created the first question, and here's the first thing:</p>
+
+						<div class="img-container">
+							<img src="1-survey-programmer-media/sc_mc.png"/>
+						</div>
+
+						<p class="post-paragraph">It's a minor matter of terminology, but this is a Radio question - you can only choose <em>one</em> answer. The question type in the top-right has the correct icon, but the question type is a bit weird. Yes, you have multiple choices that you can choose from, but so do some of the other types: "Checkboxes", "Dropdown", even the "Grid" style questions depending on what you mean by "Multiple Choice".</p>
+
+						<div class="img-container">
+							<img src="1-survey-programmer-media/sc_mc2.png"/>
+						</div>
+
+						<p class="post-paragraph">Radio questions are also known as "Single Choice questions" for obvious reasons, whereas Checkbox questions are known as "Multiple Choice questions". It's a bit confusing when you look at it this way, even if Google may have good reasons for specifically calling it a "Checkbox" question (see <a href="https://tonsky.me/blog/checkbox/">this article</a> about the confusion caused by fiddling with these conventions).</p>
+
+						<p class="post-paragraph post-note">you may notice that I haven't mentioned the "Dropdown" type, despite the fact that it's also a "Single Choice question" based on the above criteria. That's because it ultimately serves the same purpose, but in a slightly different scenario. It's usually used to choose an answer from a <em>long</em> list of <em>sorted</em> answers. A good use for it may be to get the respondent's region using a list of sorted counties, cities, etc. as the answers.</p>
+
+						<p class="post-paragraph">So we've created the first question. Depending on your circumstances, this might be the only question you need for your <b>Screener</b> section. That is, the section where we check if the respondent is eligible to complete our questionnaire. We can expand on it if we want:</p>
+
+						<ul class="classic-ul post-paragraph">
+							<li>
+								Demographics:
+								<ul class="classic-ul">
+									<li>gender</li>
+									<li>age</li>
+									<li>ethnicity</li>
+									<li>whether they live in an urban, suburban, rural area</li>
+									<li>whether they live with their parents, alone, or a partner</li>
+									<li>occupation (we usually include "Student" in this category)</li>
+									<li>income</li>
+									<li>etc.</li>
+								</ul>
+							</li>
+							<li>Do they <em>want</em> to get a pet in the near future?</li>
+							<li>Did they <em>used to</em> have a pet?</li>
+							<li>If they have a pet, are they the <em>primary</em> caretaker?</li>
+						</ul>
+						
+						<p class="post-paragraph">We can separate these into sub-sections in order to make it easier for the respondent (or for us). A 14-year-old is unlikely to have an occupation or to have moved out, but they may still be the primary caretaker of the house pet. We have handy controls that let us choose whether an answer will "Submit the form" - screen them out - or continue to the next or some other section:</p>
+
+						<div class="img-container">
+							<img src="1-survey-programmer-media/sc_mc3.png"/>
+						</div>
+
+						<div class="img-container">
+							<img src="1-survey-programmer-media/sc_mc4.png"/>
+						</div>
+
+						<p class="post-paragraph">Most of the questions in this category are Radio questions usually, though there are cases where you can use the Checkbox, Dropdown, and even Short Answer types if you wish. It depends on your questionnaire / purpose, but also on you.</p>
+
+						<p class="post-paragraph">For example, your targets may be people who own cats, but <i>do you want them to know this? (or is it important for your research if they do?)</i> If you don't care if they know or not, you can just ask them directly with a simple Radio "Yes / No" question. Alternatively, you could make a Checkbox question asking if they own any pets and only let those people continue who own cats.</p>
+
+						<p class="post-paragraph">Before we create our Screener section, there's one other thing to mention: if you want to be sure that you're gathering all the data possible then I suggest that you make every question "Required" by default. To do this go to "Settings" and scroll down to the "Question Defaults" and set the relevant (and at the moment only) setting to on. There is some wiggle room here - if a question really isn't necessary and later questions don't depend on it then it doesn't have to be "Required".</p>
+
+						<p class="post-paragraph post-note">I'm used to surveys where each question is on a different screen / section (and I also like this style). It's largely down to personal preference on Google Forms, but I recommend that you go through your questionnaire a few times and see if some sections seem too short or too long.</p>
+
+						<p class="post-paragraph">Knowing all of that, let's rename our survey to "Pet clothes" (it's not only about cat clothes <em>at all</em>) and create our Screener section.</p>
+
+						<p class="post-paragraph">You will find the link to the survey as it is at the bottom of this page. Since Google Forms is a bit inflexible (and lacking in a few aspects - why is there no "Exclusive" Checkbox answer?) the survey won't be as pretty as it could be. At the end you will find a non-mandatory question where you can provide feedback. :)</p>
+
+						<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSemnMHpFRf25T_7EqCnCjUdN9ArS2-OqTkRUpq0SMXVNAE9QQ/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSemnMHpFRf25T_7EqCnCjUdN9ArS2-OqTkRUpq0SMXVNAE9QQ/viewform?usp=sf_link</a></p>
+					</article>
+				</main>
+				<footer>
+					&copy; Copyright 2023 - 2169 Abel Orban
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
