@@ -4,7 +4,7 @@
 	    <meta charset="utf-8"/>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	    <link rel="stylesheet" href="../../general-styles.css">
+	    <link rel="stylesheet" href="../../general-styles.css?">
 	    <style>
 	    	footer {
 	    		position: initial;
@@ -35,9 +35,14 @@
 				</nav>
 				<main>
 					<article id="post">
-						<p class="art-date">Uploaded on 2024 Feb. 12th</p>
+						<p class="art-date">
+							Uploaded on 2024 Feb. 12th<br/>
+							Revised on 2024 Feb. 13th
+						</p>
 
 						<p class="post-paragraph">This is the first part of a series of articles where we'll be taking a look at Google Forms and create a survey from the ground up using it. We'll be doing this because I'm curious about Google Forms on its own and compared to the tools used at my job, and because I've noticed a few errors made by students who were using Google Forms to gather data for their theses. Whoever you are though, I hope what you read here will help you :).</p>
+
+						<p class="post-paragraph">Reason for revision: initially I really got into it but got trapped in the mindset that this is another project at work. Since I want this to be helpful for students, professors, and other busibodies who just want an easy way to collect data, I revised a couple of sections.</p>
 
 						<p><b>A couple of disclaimers:</b></p>
 						<ul class="classic-ul post-paragraph">	
@@ -45,7 +50,7 @@
 							<li>I haven't learned how to structure questionnaires or even what questions to use depending on the questionnaire's purpose. I may look into that in the future, but my advice here is based only on intuition and two years of experience</li>
 						</ul>
 
-						<p class="post-paragraph">So let's get into it - the subject of this questionnaire? Pets.</p>
+						<p class="post-paragraph">So let's get into it - the subject of this questionnaire? Cat clothes.</p>
 
 						<h3 class="post-paragraph">part 1 - the screener / screening section</h3>
 
@@ -61,32 +66,32 @@
 							<img src="1-survey-programmer-media/sc_mc2.png"/>
 						</div>
 
-						<p class="post-paragraph">Radio questions are also known as "Single Choice questions" for obvious reasons, whereas Checkbox questions are known as "Multiple Choice questions". It's a bit confusing when you look at it this way, even if Google may have good reasons for specifically calling it a "Checkbox" question (see <a href="https://tonsky.me/blog/checkbox/">this article</a> about the confusion caused by fiddling with these conventions).</p>
+						<p class="post-paragraph">Radio questions are known as "Single Choice questions" in general, for obvious reasons, whereas Checkbox questions are known as "Multiple Choice questions". It's a bit confusing when you look at it this way, even if Google may have good reasons<sup><a href="#ref-1">[1]</a></sup> for specifically calling it a "Checkbox" question.</p>
 
 						<p class="post-paragraph post-note">you may notice that I haven't mentioned the "Dropdown" type, despite the fact that it's also a "Single Choice question" based on the above criteria. That's because it ultimately serves the same purpose, but in a slightly different scenario. It's usually used to choose an answer from a <em>long</em> list of <em>sorted</em> answers. A good use for it may be to get the respondent's region using a list of sorted counties, cities, etc. as the answers.</p>
 
-						<p class="post-paragraph">So we've created the first question. Depending on your circumstances, this might be the only question you need for your <b>Screener</b> section. That is, the section where we check if the respondent is eligible to complete our questionnaire. We can expand on it if we want:</p>
+						<p class="post-paragraph">So we've created the first question. Depending on your circumstances, this might be the only question you need for your <b>Screener</b> section. That is, the section where we check if the respondent is eligible to complete our questionnaire. We can expand on it if depending on our wants and needs - there's standard (boring) stuff like <b>demographic questions</b>:</p>
 
 						<ul class="classic-ul post-paragraph">
-							<li>
-								Demographics:
-								<ul class="classic-ul">
-									<li>gender</li>
-									<li>age</li>
-									<li>ethnicity</li>
-									<li>whether they live in an urban, suburban, rural area</li>
-									<li>whether they live with their parents, alone, or a partner</li>
-									<li>occupation (we usually include "Student" in this category)</li>
-									<li>income</li>
-									<li>etc.</li>
-								</ul>
-							</li>
-							<li>Do they <em>want</em> to get a pet in the near future?</li>
-							<li>Did they <em>used to</em> have a pet?</li>
-							<li>If they have a pet, are they the <em>primary</em> caretaker?</li>
+							<li>gender</li>
+							<li>age</li>
+							<li>ethnicity</li>
+							<li>whether they live in an urban, suburban, rural area</li>
+							<li>whether they live with their parents, alone, or a partner</li>
+							<li>occupation (we usually include "Student" in this category)</li>
+							<li>income</li>
+							<li>etc.</li>
+						</ul>
+
+						<p class="post-paragraph">Maybe demographic data is important to your research, but those questions are relatively easy to formulate. What I would like to concentrate on, though, are questions that can get us the most data possible. Maybe we <em>do</em> only want people who own cats, since they are the target audience for cat clothes. But <em>maybe</em> that's too strict of a requirement. Consider the below questions:</p>
+
+						<ul class="classic-ul post-paragraph">
+							<li>Do they <em>want</em> to get a cat in the near future?</li>
+							<li>Did they <em>used to</em> have a cat?</li>
+							<li>If they have a cat, are they the <em>primary</em> caretaker or do they <em>have a say</em> in subjects regarding the cat?</li>
 						</ul>
 						
-						<p class="post-paragraph">We can separate these into sub-sections in order to make it easier for the respondent (or for us). A 14-year-old is unlikely to have an occupation or to have moved out, but they may still be the primary caretaker of the house pet. We have handy controls that let us choose whether an answer will "Submit the form" - screen them out - or continue to the next or some other section:</p>
+						<p class="post-paragraph">If you have completed questionnaires before, you may have finished it faster than expected, and thought that the last question didn't <em>feel</em> like the end of the questionnaire. That may have been a case where you were screened out, i.e. you weren't part of the target audience for that survey. As I said previously, we want to avoid that unless we're 100% sure that the respondent has no valuable data for us. For this, we can use the "Go to section based on answer" option for the Radio question type. We can use this option and the above questions for non-cat owners to gather more data.</p>
 
 						<div class="img-container">
 							<img src="1-survey-programmer-media/sc_mc3.png"/>
@@ -96,19 +101,19 @@
 							<img src="1-survey-programmer-media/sc_mc4.png"/>
 						</div>
 
-						<p class="post-paragraph">Most of the questions in this category are Radio questions usually, though there are cases where you can use the Checkbox, Dropdown, and even Short Answer types if you wish. It depends on your questionnaire / purpose, but also on you.</p>
-
-						<p class="post-paragraph">For example, your targets may be people who own cats, but <i>do you want them to know this? (or is it important for your research if they do?)</i> If you don't care if they know or not, you can just ask them directly with a simple Radio "Yes / No" question. Alternatively, you could make a Checkbox question asking if they own any pets and only let those people continue who own cats.</p>
-
 						<p class="post-paragraph">Before we create our Screener section, there's one other thing to mention: if you want to be sure that you're gathering all the data possible then I suggest that you make every question "Required" by default. To do this go to "Settings" and scroll down to the "Question Defaults" and set the relevant (and at the moment only) setting to on. There is some wiggle room here - if a question really isn't necessary and later questions don't depend on it then it doesn't have to be "Required".</p>
 
 						<p class="post-paragraph post-note">I'm used to surveys where each question is on a different screen / section (and I also like this style). It's largely down to personal preference on Google Forms, but I recommend that you go through your questionnaire a few times and see if some sections seem too short or too long.</p>
 
-						<p class="post-paragraph">Knowing all of that, let's rename our survey to "Pet clothes" (it's not only about cat clothes <em>at all</em>) and create our Screener section.</p>
+						<p class="post-paragraph">Knowing all of that, let's create our Screener section.</p>
 
-						<p class="post-paragraph">You will find the link to the survey as it is at the bottom of this page. Since Google Forms is a bit inflexible (and lacking in a few aspects - why is there no "Exclusive" Checkbox answer?) the survey won't be as pretty as it could be. At the end you will find a non-mandatory question where you can provide feedback. :)</p>
+						<p class="post-paragraph">You will find the link to the survey as it is at the bottom of this page. Since Google Forms is a bit inflexible (and lacking in a few aspects - why is there no "exclusive" Checkbox answer?) the survey won't be as pretty as it could be. At the end you will find a non-mandatory question where you can provide feedback. :)</p>
 
-						<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSemnMHpFRf25T_7EqCnCjUdN9ArS2-OqTkRUpq0SMXVNAE9QQ/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSemnMHpFRf25T_7EqCnCjUdN9ArS2-OqTkRUpq0SMXVNAE9QQ/viewform?usp=sf_link</a></p>
+						<p class="post-paragraph"><a href="https://docs.google.com/forms/d/e/1FAIpQLSemnMHpFRf25T_7EqCnCjUdN9ArS2-OqTkRUpq0SMXVNAE9QQ/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSemnMHpFRf25T_7EqCnCjUdN9ArS2-OqTkRUpq0SMXVNAE9QQ/viewform?usp=sf_link</a></p>
+
+						<ul class="post-paragraph" style="list-style-type: none;">
+							<li id="ref-1">[1] - <a href="https://tonsky.me/blog/checkbox/">https://tonsky.me/blog/checkbox/</a></li>
+						</ul>
 					</article>
 				</main>
 				<footer>
