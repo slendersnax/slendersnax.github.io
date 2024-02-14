@@ -1,0 +1,33 @@
+:root {
+	--main-bg-color: beige;
+	--main-font-color: #444444;
+	--very-faded-black: rgba(0, 0, 0, 0.2);
+	--faded-black: rgba(0, 0, 0, 0.5);
+	--faded-white: rgba(255, 255, 255, 0.5);
+
+	--dark-bg-color: #37322d;
+	--dark-font-color: #ccc;
+}
+
+input:not(:checked) ~ #inner-body {
+	background: var(--main-bg-color);
+	color: var(--main-font-color);
+}
+
+input:not(:checked) ~ #inner-body a {
+	color: rgb(0, 0, 238);
+}
+
+input:not(:checked) ~ #inner-body details {
+	background: rgba(0, 0, 0, .1);
+}
+
+input:not(:checked) ~ #inner-body nav > p > label::before {
+	content: "\2715";
+	color: red;
+	flex: 18;
+}
+
+input:not(:checked) ~ #inner-body .art-date {
+	color: var(--faded-black);
+}

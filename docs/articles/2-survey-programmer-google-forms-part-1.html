@@ -4,17 +4,18 @@
 	    <meta charset="utf-8"/>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	    <link rel="stylesheet" href="../../general-styles.css?">
+	    <link rel="stylesheet" href="../general-styles.css?">
+	    <link rel="stylesheet" href="../light-mode.css?">
 	    <style>
 	    	footer {
 	    		position: initial;
 	    	}
 	    </style>
 
-	    <title>A look at Google Forms as a Survey Programmer - Part 1</title>
+	    <title>A look at Google Forms as a Survey Programmer - Part 1 - slendersnax.github.io</title>
 	</head>
 	<body>
-		<input type="checkbox" id="dark"/>
+		<input type="checkbox" id="dark" checked/>
 		<div id="inner-body">
 			<div id="main-container">
 				<nav>
@@ -29,8 +30,8 @@
 				<nav>
 					<h3 class="greeting"></h3>
 					<p>
-						<a href="../programming-articles.html">Prog. Art.</a>
-						<a href="../../index.html">Home</a>
+						<a href="../articles.html">Articles</a>
+						<a href="../index.html">Home</a>
 					</p>
 				</nav>
 				<main>
@@ -42,7 +43,7 @@
 
 						<p class="post-paragraph">This is the first part of a series of articles where we'll be taking a look at Google Forms and create a survey from the ground up using it. We'll be doing this because I'm curious about Google Forms on its own and compared to the tools used at my job, and because I've noticed a few errors made by students who were using Google Forms to gather data for their theses. Whoever you are though, I hope what you read here will help you :).</p>
 
-						<p class="post-paragraph">Reason for revision: initially I really got into it but got trapped in the mindset that this is another project at work. Since I want this to be helpful for students, professors, and other busibodies who just want an easy way to collect data, I revised a couple of sections.</p>
+						<p class="post-paragraph">Reason for revision: initially I really got into this but got trapped in the mindset that this is another project at work. Since I want this to be helpful for students, professors, and other busybodies who just want an easy way to collect data, I revised a couple of sections.</p>
 
 						<p><b>A couple of disclaimers:</b></p>
 						<ul class="classic-ul post-paragraph">	
@@ -57,13 +58,13 @@
 						<p>I just created a blank Form, created the first question, and here's the first thing:</p>
 
 						<div class="img-container">
-							<img src="1-survey-programmer-media/sc_mc.png"/>
+							<img src="2-survey-programmer-media/sc_mc.png"/>
 						</div>
 
 						<p class="post-paragraph">It's a minor matter of terminology, but this is a Radio question - you can only choose <em>one</em> answer. The question type in the top-right has the correct icon, but the question type is a bit weird. Yes, you have multiple choices that you can choose from, but so do some of the other types: "Checkboxes", "Dropdown", even the "Grid" style questions depending on what you mean by "Multiple Choice".</p>
 
 						<div class="img-container">
-							<img src="1-survey-programmer-media/sc_mc2.png"/>
+							<img src="2-survey-programmer-media/sc_mc2.png"/>
 						</div>
 
 						<p class="post-paragraph">Radio questions are known as "Single Choice questions" in general, for obvious reasons, whereas Checkbox questions are known as "Multiple Choice questions". It's a bit confusing when you look at it this way, even if Google may have good reasons<sup><a href="#ref-1">[1]</a></sup> for specifically calling it a "Checkbox" question.</p>
@@ -94,11 +95,11 @@
 						<p class="post-paragraph">If you have completed questionnaires before, you may have finished it faster than expected, and thought that the last question didn't <em>feel</em> like the end of the questionnaire. That may have been a case where you were screened out, i.e. you weren't part of the target audience for that survey. As I said previously, we want to avoid that unless we're 100% sure that the respondent has no valuable data for us. For this, we can use the "Go to section based on answer" option for the Radio question type. We can use this option and the above questions for non-cat owners to gather more data.</p>
 
 						<div class="img-container">
-							<img src="1-survey-programmer-media/sc_mc3.png"/>
+							<img src="2-survey-programmer-media/sc_mc3.png"/>
 						</div>
 
 						<div class="img-container">
-							<img src="1-survey-programmer-media/sc_mc4.png"/>
+							<img src="2-survey-programmer-media/sc_mc4.png"/>
 						</div>
 
 						<p class="post-paragraph">Before we create our Screener section, there's one other thing to mention: if you want to be sure that you're gathering all the data possible then I suggest that you make every question "Required" by default. To do this go to "Settings" and scroll down to the "Question Defaults" and set the relevant (and at the moment only) setting to on. There is some wiggle room here - if a question really isn't necessary and later questions don't depend on it then it doesn't have to be "Required".</p>
@@ -121,5 +122,6 @@
 				</footer>
 			</div>
 		</div>
+		<script src="../darkmode_setup.js"></script>
 	</body>
 </html>

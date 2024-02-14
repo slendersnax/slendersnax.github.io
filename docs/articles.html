@@ -4,16 +4,17 @@
 	    <meta charset="utf-8"/>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	    <link rel="stylesheet" href="../general-styles.css?">
+	    <link rel="stylesheet" href="general-styles.css?">
+	    <link rel="stylesheet" href="light-mode.css?">
 
-	    <title>Programming Articles</title>
+	    <title>Articles - slendersnax.github.io</title>
 	</head>
 	<body>
-		<input type="checkbox" id="dark"/>
+		<input type="checkbox" id="dark" checked/>
 		<div id="inner-body">
 			<div id="main-container">
 				<nav>
-					<h3 class="greeting">Welcome</h3>
+					<h3 class="greeting">Articles</h3>
 					<p>
 						<label for="dark">
 							<span>Dark</span>
@@ -24,19 +25,19 @@
 				<nav>
 					<h3 class="greeting"></h3>
 					<p>
-						<a href="../index.html">Home</a>
+						<a href="index.html">Home</a>
 					</p>
 				</nav>
 				<main>
 					<article id="post">
 						<ul class="sl-item-list">
-							<li id="dark-user-article">
-								<a href="programming/0-why-dark-btn-not-working.html">"Why doesn't the 'Dark' button do anything for me?"</a>
-								<p class="art-date">2023 Sep. 7th</p>
+							<li>
+								<a href="articles/2-survey-programmer-google-forms-part-1.html">A look at Google Forms as a Survey Programmer - Part 1</a>
+								<p class="art-date">2024 Feb. 12th</p>
 							</li>
 							<li>
-								<a href="programming/1-survey-programmer-google-forms-part-1.html">A look at Google Forms as a Survey Programmer - Part 1</a>
-								<p class="art-date">2024 Feb. 12th</p>
+								<a href="articles/1-ebony-warrior-shezarrine.html">Game Theory (Elder Scrolls 5): I think the Ebony Warrior could be a Shezarrine</a>
+								<p class="art-date">2023 Oct. 7th</p>
 							</li>
 							<li>
 								<a href="https://dev.to/slendersnax/a-way-to-enable-ansi-escape-sequences-in-the-windows-virtual-terminal-using-python-32ok">External (dev.to) Article - A way to enable ANSI escape sequences in the Windows virtual terminal using Python</a>
@@ -50,5 +51,6 @@
 				</footer>
 			</div>
 		</div>
+		<script src="darkmode_setup.js"></script>
 	</body>
 </html>
