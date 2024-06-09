@@ -96,14 +96,13 @@
 	    	.country-container .song-title {
 	    		display: none;
 
-	    		width: 600px;
+	    		width: 90vw;
 	    		min-height: 50px;
 
 	    		position: fixed;
-	    		top: 20%;
-	    		left: 50%;
-	    		margin-left: -300px;
-
+	    		top: 10%;
+	    		left: 5vw;
+	    		
 	    		background: rgba(0, 0, 0, .9);
 	    		padding: 0.5em 0.7em;
 	    		font-size: 1.2rem;
@@ -111,6 +110,15 @@
 
 	    	.country-container:hover .song-title {
 	    		display: block;
+	    	}
+
+	    	@media (min-width: 961px) {
+	    		.country-container .song-title {
+	    			width: 600px;
+	    			top: 20%;
+	    			left: 50%;
+	    			margin-left: -300px;
+	    		}
 	    	}
 	    </style>
 
