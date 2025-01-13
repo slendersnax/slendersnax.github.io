@@ -4,9 +4,6 @@
 	--very-faded-black: rgba(0, 0, 0, 0.2);
 	--faded-black: rgba(0, 0, 0, 0.5);
 	--faded-white: rgba(255, 255, 255, 0.5);
-
-	--dark-bg-color: #37322d;
-	--dark-font-color: #ccc;
 }
 
 /* setting up the whole page */
@@ -33,11 +30,6 @@ body {
 	width: 100%;
 	height: 100%;
 	position: relative;
-}
-
-/* css-only dark mode checkbox */
-input#dark {
-	display: none;
 }
 
 /* inner divs / bodies exist for css-only dark mode */
@@ -67,22 +59,9 @@ footer {
 
 /* navigation bar(s) */
 
-nav {
-	display: flex;
-	flex-direction: column;
-}
-
-nav:first-child,
+nav,
 #post {
 	padding-top: 1rem;
-}
-
-nav > * {
-	flex: 1;
-}
-
-nav > .greeting {
-	flex: 3;
 }
 
 nav > p:last-child {
@@ -170,28 +149,29 @@ a:hover {
 	margin: 1em auto;
 }
 
-/* dark mode */
+/* colouring */
+
 #inner-body {
-	background: var(--dark-bg-color);
-	color: var(--dark-font-color);
+	background: var(--main-bg-color);
+	color: var(--main-font-color);
 }
 
 #inner-body a {
-	color: #1aa0cb;
+	color: rgb(0, 0, 238);
 }
 
 #inner-body details {
-	background: rgba(0, 0, 0, .2);
+	background: rgba(0, 0, 0, .1);
 }
 
 #inner-body nav > p > label::before {
-	content: "\2713";
-	color: green;
+	content: "\2715";
+	color: red;
 	flex: 18;
 }
 
 #inner-body .art-date {
-	color: var(--faded-white);
+	color: var(--faded-black);
 }
 
 /* 
@@ -220,14 +200,6 @@ a:hover {
 		width: 900px;
 	}
 
-	nav {
-		flex-direction: row;
-	}
-
-	nav > p > label::before {
-		flex: 5;
-	}
-
 	footer {
 		position: absolute;
 		bottom: 0;
@@ -236,9 +208,5 @@ a:hover {
 
 	.img-container > img {
 		max-width: 50%;
-	}
-
-	input:checked ~ #inner-body nav > p > label::before {
-		flex: 5;
 	}
 }
