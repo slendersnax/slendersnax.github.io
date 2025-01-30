@@ -29,13 +29,13 @@
 						<ul class="sl-item-list post-paragraph">
 							<li>
 								<p><b>2022 July - Present:</b> Survey Programmer <b>@</b> Dynata.</p>
-								<p><b>Technologies:</b> Decipher, Python, JavaScript, jQuery, CSS3, HTML5, Confluence, Microsoft SharePoint.</p>
+								<p><b>Technologies:</b> Decipher, Python, JavaScript, jQuery, CSS3, HTML5, Confluence, Microsoft Office and SharePoint.</p>
 								<p>I guess someone has to make the surveys that other complete, I just never thought about who does that and how. Niche and fun. Even more fun when the questionnaire is complex, because it means more customisation.</p>
 							</li>
 							<li>
 								<p><b>2022 January, February:</b> Data Steward <b>@</b> Veeva.</p>
 								<p><b>Technologies:</b> Veeva's Data Collection platform. I assume (but I never looked it up) that other companies working in the same field have similar platforms and workflows.</p>
-								<p>It was nice to work in a team, but I don't want to do this again. In this part of the town (the world) hospital sites range from great and updated frequently to inexistent, in which case you have to call the respective institution for information. If only someone offered to make those hospitals websites...</p>
+								<p>It was nice to work in a team, but I don't want to do this again. In this part of the town (the world) hospital sites range from great and updated frequently to non-existent, in which case you have to call the respective institution for information. If only someone offered to make website for those hospitals...</p>
 							</li>
 							<li id="first">
 								<p><b>2021 June - November:</b> Application Developer <b>@</b> Atos.</p>
@@ -50,6 +50,27 @@
 								<progress id="proj-personal-site" max="100" value="100">100%</progress>
 								<p><b>Technologies:</b> Vanilla JS, CSS3, HTML5</p>
 								<p>I started working on this in August 2023 almost purely because having my own site really appeals to me. It's fully functional as it is right now, but I want to add a few quality-of-life improvements like dark mode persistence (added in Feb 2024 yay). As of Feb 2024 it's in complete working order, though there may be changes in the future.</p>
+								<p>As of January 2025 I've removed dark mode entirely and updated the look of the site a bit.</p>
+							</li>
+							<li>
+								<label for="proj-dequoted"><b><a href="https://github.com/slendersnax/dequoted">Dequoted</a></b> - working, waiting for QOL improvements:</label>
+								<progress id="proj-dequoted" max="100" value="75">75%</progress>
+								<p><b>Technologies:</b> Python, JSON, CSV</p>
+								<p>An attempt to make generating complex quota setups easier. (Imagine the problem described in <a href="https://forstasurveys.zendesk.com/hc/en-us/articles/4409461451035-Assigning-Balanced-Concepts-in-Quotas-with-Multiple-Variables">here</a>, but with even more variables.)</p>
+								<p>How well does it work? Well I'm using it, and it helped me. In order to make it more widely used, a GUI or Excel plugin (macro? VBA script?) would help.</p>
+							</li>
+							<li>
+								<label for="proj-crawler"><b><a href="https://github.com/slendersnax/sea-crawler">sea-crawler</a></b> - pushing the limits of what MVP means, but working:</label>
+								<progress id="proj-crawler" max="100" value="10">10%</progress>
+								<p><b>Technologies:</b> Python, JSON</p>
+								<p>The problem(s):
+									<ul class="classic-ul">
+										<li>there is no real alternative to Visual Studio on Linux (I will check Qt Creator and come back to this point - Jan 2025)</li>
+										<li>Visual Studio generates a whole buttload of configuration, build and Gates-knows-what files - I hate this</li>
+										<li>I want to make a build system :)</li>
+									</ul>
+								</p>
+								<p>The solution: <b>sea-crawler</b> - which <strike>generates</strike> <em>will</em> generate a normal JSON file containing all the project information. Maybe I will make it generate <i>make</i> or <i>CMake</i> files in the future, but that's a while away.</p>
 							</li>
 							<li>
 								<label for="proj-waddup"><b><a href="https://github.com/slendersnax/WADdup">WADdup</a></b> - almost complete, useable:</label>
@@ -57,13 +78,6 @@
 								<p><b>Technologies:</b> Java</p>
 								<p class="post-paragraph">If you still play the original Doom games you're almost certainly using a sourceport to do so - it's also very likely that you're using <a href="https://zdoom.org/index">GZDoom</a>. Here's the thing, the standard launcher is nice and completely fine if you're only playing Vanilla Doom or not using that many PWADS (Doom mods). Once you start using more PWADS though, especially ones that may cause conflicts if they're loaded in an incorrect order, the simple drag-and-drop method of loading them becomes a bit...annoying.</p>
 								<p>So I created WADdup, because I wasn't aware that <a href="https://zdoom.org/wiki/Frontend">other launchers existed</a>. I would have created it anyway though, probably. From a technical standpoint, it's not very interesting, just a simple Java desktop application. But it works pretty well, and isn't that all you need in the end?</p>
-							</li>
-							<li>
-								<label for="proj-personal-weatherapp"><b>Personal weather app</b> - discontinued | React Native</label>
-								
-								<p><b>Technologies:</b> React Native, OpenWeather API</p>
-								<p class="post-paragraph">In all honesty, I'm kind of bored with this one. The purpose was to learn how to use React Native and an API (the OpenWeather one in this case), but it's been dragging on for more than a month. On one hand, it would be a great show of discipline if I could finish it. On the other...I can learn about these technologies with a project that I actually need / want.</p>
-								<p>Reason for discontinuation: React Native - I might come back to it in the future, but at the moment it's not for me. I also took a bite of the Flutter apple a while ago, and prefer it to React Native.</p>
 							</li>
 							<li>
 								<label for="proj-slr-local-db"><b><a href="https://github.com/slendersnax/slr-local-db">slr-local-db</a></b> - complete(ish) / permanent hiatus:</label>
