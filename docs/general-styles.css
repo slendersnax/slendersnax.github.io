@@ -92,6 +92,10 @@ nav > p > label > span {
 
 ul.classic-ul {
 	list-style-type: disc;
+}
+
+ul.classic-ul,
+.list-padding-adjustment {
 	padding-left: 2.5em;
 }
 
