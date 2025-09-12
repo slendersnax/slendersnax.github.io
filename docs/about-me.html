@@ -53,11 +53,11 @@
 								<p>As of January 2025 I've removed dark mode entirely and updated the look of the site a bit.</p>
 							</li>
 							<li>
-								<label for="proj-dequoted"><b><a href="https://github.com/slendersnax/dequoted">Dequoted</a></b> - working, waiting for QOL improvements:</label>
-								<progress id="proj-dequoted" max="100" value="75">75%</progress>
+								<label for="proj-dequoted"><b><a href="https://github.com/slendersnax/dequoted">Dequoted</a></b>:</label>
+								<progress id="proj-dequoted" max="100" value="100">100%</progress>
 								<p><b>Technologies:</b> Python, JSON, CSV</p>
 								<p>An attempt to make generating complex quota setups easier. (Imagine the problem described in <a href="https://forstasurveys.zendesk.com/hc/en-us/articles/4409461451035-Assigning-Balanced-Concepts-in-Quotas-with-Multiple-Variables">here</a>, but with even more variables.)</p>
-								<p>How well does it work? Well I'm using it, and it helped me. In order to make it more widely used, a GUI or Excel plugin (macro? VBA script?) would help.</p>
+								<p>This works now and has two separate implementations - a web version that you can find <a href="dequoted/dequoter-web/index-dequote.html">here</a> and a Python version that works offline.</p>
 							</li>
 							<li>
 								<label for="proj-crawler"><b><a href="https://github.com/slendersnax/sea-crawler">sea-crawler</a></b> - pushing the limits of what MVP means, but working:</label>
@@ -65,7 +65,11 @@
 								<p><b>Technologies:</b> Python, JSON</p>
 								<p>The problem(s):
 									<ul class="classic-ul">
-										<li>there is no real alternative to Visual Studio on Linux (I will check Qt Creator and come back to this point - Jan 2025)</li>
+										<li>there is no real alternative to Visual Studio on Linux (I will check Qt Creator and come back to this point - Jan 2025)
+											<ul class="classic-ul">
+												<li>update September 2025: CLion is now free for non-commercial use wooooo</li>
+											</ul>
+										</li>
 										<li>Visual Studio generates a whole buttload of configuration, build and Gates-knows-what files - I hate this</li>
 										<li>I want to make a build system :)</li>
 									</ul>
@@ -73,11 +77,10 @@
 								<p>The solution: <b>sea-crawler</b> - which <strike>generates</strike> <em>will</em> generate a normal JSON file containing all the project information. Maybe I will make it generate <i>make</i> or <i>CMake</i> files in the future, but that's a while away.</p>
 							</li>
 							<li>
-								<label for="proj-waddup"><b><a href="https://github.com/slendersnax/WADdup">WADdup</a></b> - almost complete, useable:</label>
-								<progress id="proj-waddup" max="100" value="95">95%</progress>
+								<label for="proj-waddup"><b><a href="https://github.com/slendersnax/WADdup">WADdup</a></b> - eternal 99%:</label>
+								<progress id="proj-waddup" max="100" value="99">99%</progress>
 								<p><b>Technologies:</b> Java</p>
-								<p class="post-paragraph">If you still play the original Doom games you're almost certainly using a sourceport to do so - it's also very likely that you're using <a href="https://zdoom.org/index">GZDoom</a>. Here's the thing, the standard launcher is nice and completely fine if you're only playing Vanilla Doom or not using that many PWADS (Doom mods). Once you start using more PWADS though, especially ones that may cause conflicts if they're loaded in an incorrect order, the simple drag-and-drop method of loading them becomes a bit...annoying.</p>
-								<p>So I created WADdup, because I wasn't aware that <a href="https://zdoom.org/wiki/Frontend">other launchers existed</a>. I would have created it anyway though, probably. From a technical standpoint, it's not very interesting, just a simple Java desktop application. But it works pretty well, and isn't that all you need in the end?</p>
+								<p>So I created WADdup, because I wasn't aware that <a href="https://zdoom.org/wiki/Frontend">other launchers existed</a> (for Linux - the standard GZDoom launcher is completely fine on Windows). I would have created it anyway though, probably. From a technical standpoint, it's not very interesting, just a simple Java desktop application. But it works pretty well, and isn't that all you need in the end?</p>
 							</li>
 							<li>
 								<label for="proj-slr-local-db"><b><a href="https://github.com/slendersnax/slr-local-db">slr-local-db</a></b> - complete(ish) / permanent hiatus:</label>

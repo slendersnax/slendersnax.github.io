@@ -1,0 +1,3 @@
+[submodule "docs/dequoted"]
+	path = docs/dequoted
+	url = https://github.com/slendersnax/dequoted
