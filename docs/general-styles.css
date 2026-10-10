@@ -119,6 +119,20 @@ ul > li {
 	border-bottom: none;
 }
 
+.sl-item-list.horizontal {
+	display: flex;
+}
+
+.sl-item-list.horizontal > li {
+	flex: 1;
+	text-align: center;
+}
+
+.sl-item-list.horizontal > li:not(:last-child) {
+	border-bottom: 2px solid var(--very-faded-black);
+	border-right: none;
+}
+
 /* other */
 
 a {
@@ -129,7 +143,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-.post-paragraph {
+#post p:not(.art-date) {
 	margin-bottom: 1rem;
 }
 
@@ -144,14 +158,14 @@ a:hover {
 	content: "Note: ";
 }
 
-#post > .art-date {
-	margin-bottom: 1rem;
-}
-
 .img-container > img {
 	display: block;
 	max-width: 100%;
 	margin: 1em auto;
+}
+
+details:hover {
+	cursor: pointer;
 }
 
 /* colouring */

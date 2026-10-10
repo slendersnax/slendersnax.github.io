@@ -24,86 +24,141 @@
 				<main>
 					<article id="post">
 						<p>Hello, I'm Abel. Nice to meet you!</p>
-						<p>Below you can find a summary / timeline of my professional career and further down a section with my side projects.</p>
+						<p>Below you can find a summary / timeline of my professional career and further down a section with my side projects. Jobs and projects that aren't very notable are hidden inside a dropdown.</p>
 
-						<ul class="sl-item-list post-paragraph">
-							<li>
-								<p><b>2022 July - Present:</b> Survey Programmer <b>@</b> Dynata.</p>
-								<p><b>Technologies:</b> Decipher, Python, JavaScript, jQuery, CSS3, HTML5, Confluence, Microsoft Office and SharePoint.</p>
-								<p>I guess someone has to make the surveys that other complete, I just never thought about who does that and how. Niche and fun. Even more fun when the questionnaire is complex, because it means more customisation.</p>
-							</li>
-							<li>
-								<p><b>2022 January, February:</b> Data Steward <b>@</b> Veeva.</p>
-								<p><b>Technologies:</b> Veeva's Data Collection platform. I assume (but I never looked it up) that other companies working in the same field have similar platforms and workflows.</p>
-								<p>It was nice to work in a team, but I don't want to do this again. In this part of the town (the world) hospital sites range from great and updated frequently to non-existent, in which case you have to call the respective institution for information. If only someone offered to make website for those hospitals...</p>
-							</li>
-							<li id="first">
-								<p><b>2021 June - November:</b> Application Developer <b>@</b> Atos.</p>
-								<p><b>Technologies:</b> Linux CLI, C++, Python, Bash, Git, Confluence, Jira.</p>
-								<p>Kind of an oof because I wasn't yet ready for the leap from college level to production, but a good first experience nonetheless.</p>
-							</li>
+						<ul class="sl-item-list horizontal">
+							<li><a href="#career">Career</a></li>
+							<li><a href="#education">Education</a></li>
+							<li><a href="#side-projects">Side Projects</a></li>
 						</ul>
-						<h3 class="post-paragraph">Notable side projects (with helpful indicators about how complete I consider them to be)</h3>
+						
+						<h3 id="career">Career</h3>
 						<ul class="sl-item-list">
 							<li>
-								<label for="proj-personal-site"><b>Personal site (this one)</b> - complete:</label>
+								<p><b>2022 July - Present:</b> Survey Programmer <b>@</b> Dynata.</p>
+								<ul>
+									<li>Co-led a multi-country tracker project across multiple waves, implementing scripting and workflow improvements that increased data clarity and streamlined survey development.</li>
+									<li>Developed internal automation tools, including a <a href="#proj-dequoted">quota generator</a> and quota-marker fixer, reducing repetitive manual work and improving consistency across survey scripts.</li>
+									<li>Led the team's transition from Sublime Text to Visual Studio Code, developing and supporting <a href="#proj-vscode-clips">custom extensions</a> while helping modernize the scripting environment and reduce tooling costs.</li>
+									<li>Integrated Metaforms into the scripting workflow and developed custom rules to extend its capabilities and improve survey development efficiency.</li>
+									<li>Develop and maintain custom survey functionality using Python, JavaScript, XML, HTML/CSS and Decipher, translating complex questionnaire requirements into production-ready implementations.</li>
+								</ul>
+							</li>
+							<li>
+								<details>
+									<summary>
+										<b>2022 January, February:</b> Data Steward <b>@</b> Veeva.
+									</summary>
+									<p><b>Technologies:</b> Veeva's Data Collection platform. I assume (but I never looked it up) that other companies working in the same field have similar platforms and workflows.</p>
+									<p>It was nice to work in a team, but I don't want to do this again. In this part of the town (the world) hospital sites range from great and updated frequently to non-existent, in which case you have to call the respective institution for information. If only someone offered to make website for those hospitals...</p>
+								</details>
+							</li>
+							<li>
+								<p><b>2021 June - November:</b> Application Developer <b>@</b> Atos.</p>
+								<ul>
+									<li>Contributed to the migration of an enterprise application environment from SUSE Linux Enterprise 11 to SUSE 15, working with Bash, Git and Linux CLI tooling.</li>
+									<li>Implemented bug fixes across multiple areas of the company's product and collaborated with the development team using Jira and Confluence.</li>
+								</ul>
+							</li>
+							<li>
+								<p><b>2017 June - September:</b> Junior Software Developer <b>@</b> Fuelplus.</p>
+								<ul>
+									<li>Developed Angular 2 components from UI mockups as part of the migration of the company's product to a modern web framework.</li>
+									<li>Built reusable web components using HTML5, CSS3 and JavaScript, with additional experience in SCSS and Bootstrap.</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 id="education">Education</h3>
+						<ul class="sl-item-list">
+							<li><b>2023 - 2026:</b> Bachelor's Degree in Computer Science <b>@</b> Universitatea Transilvania.</li>
+							<li><b>Language Skills:</b>
+								<ul>
+									<li>Hungarian: Native (Mother Tongue)</li>
+									<li>Romanian: Fluent</li>
+									<li>English: C2 / Fluent</li>
+									<li>German: A2 / Basic</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 id="side-projects">Notable side projects (with helpful indicators about how complete I consider them to be)</h3>
+						<ul class="sl-item-list">
+							<li>
+								<label for="proj-vscode-clips"><b><a href="https://github.com/slendersnax/decipher-vscode-clips">Decipher VS Code Clips</a></b> - complete, making updates</label><br/>
+								<progress id="proj-vscode-clips" max="100" value="95">95%</progress>
+								<p><b>Technologies:</b> TypeScript</p>
+								<p>While there are <a href="https://github.com/decipher-survey-programming">existing extensions</a> to assist survey programming in Decipher, an extension for VS Code is notably missing.</p>
+							</li>
+							<li>
+								<label for="proj-dequoted"><b><a href="https://github.com/slendersnax/dequoted">Dequoted</a></b> - complete, making updates</label><br/>
+								<progress id="proj-dequoted" max="100" value="100">100%</progress>
+								<p><b>Technologies:</b> Python, JSON, CSV</p>
+								<p>An app that makes generating complex quota setups easier. (Imagine the problem described in <a href="https://forstasurveys.zendesk.com/hc/en-us/articles/4409461451035-Assigning-Balanced-Concepts-in-Quotas-with-Multiple-Variables">here</a>, but with even more variables.)</p>
+								<p>It two separate implementations - a web version that you can find <a href="dequoted/dequoter-web/index-dequote.html">here</a> and a Python version that works offline.</p>
+							</li>
+
+							<li>
+								<label for="proj-waddup"><b><a href="https://github.com/slendersnax/WADdup">WADdup</a></b> - complete, making updates</label><br/>
+								<progress id="proj-waddup" max="100" value="99">99%</progress>
+								<p><b>Technologies:</b> Java</p>
+								<p>So I created WADdup because I wasn't aware that <a href="https://zdoom.org/wiki/Frontend">other launchers existed</a> (for Linux - the standard GZDoom launcher is completely fine on Windows). I would have created it anyway though, probably. From a technical standpoint, it's not very interesting, just a simple Java desktop application. But it works pretty well, and isn't that all you need in the end?</p>
+							</li>
+							<li>
+								<label for="proj-personal-site"><b>Personal site (this one)</b> - complete, making updates</label>
+								<br/>
 								<progress id="proj-personal-site" max="100" value="100">100%</progress>
 								<p><b>Technologies:</b> Vanilla JS, CSS3, HTML5</p>
 								<p>I started working on this in August 2023 almost purely because having my own site really appeals to me. It's fully functional as it is right now, but I want to add a few quality-of-life improvements like dark mode persistence (added in Feb 2024 yay). As of Feb 2024 it's in complete working order, though there may be changes in the future.</p>
 								<p>As of January 2025 I've removed dark mode entirely and updated the look of the site a bit.</p>
 							</li>
-							<li>
-								<label for="proj-dequoted"><b><a href="https://github.com/slendersnax/dequoted">Dequoted</a></b>:</label>
-								<progress id="proj-dequoted" max="100" value="100">100%</progress>
-								<p><b>Technologies:</b> Python, JSON, CSV</p>
-								<p>An attempt to make generating complex quota setups easier. (Imagine the problem described in <a href="https://forstasurveys.zendesk.com/hc/en-us/articles/4409461451035-Assigning-Balanced-Concepts-in-Quotas-with-Multiple-Variables">here</a>, but with even more variables.)</p>
-								<p>This works now and has two separate implementations - a web version that you can find <a href="dequoted/dequoter-web/index-dequote.html">here</a> and a Python version that works offline.</p>
-							</li>
-							<li>
-								<label for="proj-crawler"><b><a href="https://github.com/slendersnax/sea-crawler">sea-crawler</a></b> - pushing the limits of what MVP means, but working:</label>
-								<progress id="proj-crawler" max="100" value="10">10%</progress>
-								<p><b>Technologies:</b> Python, JSON</p>
-								<p>The problem(s):
-									<ul class="classic-ul">
-										<li>there is no real alternative to Visual Studio on Linux (I will check Qt Creator and come back to this point - Jan 2025)
-											<ul class="classic-ul">
-												<li>update September 2025: CLion is now free for non-commercial use wooooo</li>
-											</ul>
-										</li>
-										<li>Visual Studio generates a whole buttload of configuration, build and Gates-knows-what files - I hate this</li>
-										<li>I want to make a build system :)</li>
-									</ul>
-								</p>
-								<p>The solution: <b>sea-crawler</b> - which <strike>generates</strike> <em>will</em> generate a normal JSON file containing all the project information. Maybe I will make it generate <i>make</i> or <i>CMake</i> files in the future, but that's a while away.</p>
-							</li>
-							<li>
-								<label for="proj-waddup"><b><a href="https://github.com/slendersnax/WADdup">WADdup</a></b> - eternal 99%:</label>
-								<progress id="proj-waddup" max="100" value="99">99%</progress>
-								<p><b>Technologies:</b> Java</p>
-								<p>So I created WADdup, because I wasn't aware that <a href="https://zdoom.org/wiki/Frontend">other launchers existed</a> (for Linux - the standard GZDoom launcher is completely fine on Windows). I would have created it anyway though, probably. From a technical standpoint, it's not very interesting, just a simple Java desktop application. But it works pretty well, and isn't that all you need in the end?</p>
-							</li>
-							<li>
-								<label for="proj-slr-local-db"><b><a href="https://github.com/slendersnax/slr-local-db">slr-local-db</a></b> - complete(ish) / permanent hiatus:</label>
-								<progress id="proj-slr-local-db" max="100" value="100">100%</progress>
-								<p><b>Technologies:</b> Vanilla JS</p>
-								<p class="post-paragraph">I really like persistent storage. At some point in the near future, I will implement a short script in this site to store the dark mode preference of the user, because I would love to have that as a user of any site.</p>
-								<p>This uses the LocalStorage API and its structure is based on absolutely nothing but intuition, trial and error, and revisions. If it had been a serious project developed for a specific purpose, I would have researched the hell out of the 'why'-s and 'how'-s of normal database languages. (I have only used MySQL and SQLite so far, but I'm curious about other ones too.)</p>
-								<p>As it is, it was fun to work on this and it's very useable (imo).</p>
-							</li>
-							<li>
-								<label for="proj-battleship"><b><a href="https://github.com/slendersnax/battleship">Battleship</a></b> - complete(ish):</label>
-								<progress id="proj-battleship" max="100" value="99">99%</progress>
-								<p><b>Technologies:</b> C++, SFML</p>
-								<p>I like to make games, although for the moment I don't have any original ones. I do have several (relatively) lightweight clones of popular games, though, all of them in the same state as this one: done, with a few quality-of-life things missing, and in need of code refactoring.</p>
-								<p>Others include:
-									<ul class="classic-ul">
-										<li><a href="https://github.com/slendersnax/arch-minesweeper-sfml">Minesweeper</a> using the same technologies (this one is actually complete)</li>
-										<li><a href="https://github.com/slendersnax/python-2048">2048</a> using Python</li>
-										<li><a href="https://github.com/slendersnax/spider-solitaire-py">Spider Solitaire</a> but in the console, using Python</li>
-									</ul>
-								</p>
-							</li>
 						</ul>
+
+						<details>
+							<summary>
+								<h3 style="display: inline;">Less notable side projects</h3>
+							</summary>
+							<ul class="sl-item-list">
+								<li>
+									<label for="proj-slr-local-db"><b><a href="https://github.com/slendersnax/slr-local-db">slr-local-db</a></b> - complete(ish) / permanent hiatus:</label>
+									<progress id="proj-slr-local-db" max="100" value="100">100%</progress>
+									<p><b>Technologies:</b> Vanilla JS</p>
+									<p>I really like persistent storage. At some point in the near future, I will implement a short script in this site to store the dark mode preference of the user, because I would love to have that as a user of any site.</p>
+									<p>This uses the LocalStorage API and its structure is based on absolutely nothing but intuition, trial and error, and revisions. If it had been a serious project developed for a specific purpose, I would have researched the hell out of the 'why'-s and 'how'-s of normal database languages. (I have only used MySQL and SQLite so far, but I'm curious about other ones too.)</p>
+									<p>As it is, it was fun to work on this and it's very useable (imo).</p>
+								</li>
+								<li>
+									<label for="proj-crawler"><b><a href="https://github.com/slendersnax/sea-crawler">sea-crawler</a></b> - pushing the limits of what MVP means, but working:</label>
+									<progress id="proj-crawler" max="100" value="10">10%</progress>
+									<p><b>Technologies:</b> Python, JSON</p>
+									<p>The problem(s):
+										<ul class="classic-ul">
+											<li>there is no real alternative to Visual Studio on Linux (I will check Qt Creator and come back to this point - Jan 2025)
+												<ul class="classic-ul">
+													<li>update September 2025: CLion is now free for non-commercial use wooooo</li>
+												</ul>
+											</li>
+											<li>Visual Studio generates a whole buttload of configuration, build and Gates-knows-what files - I hate this</li>
+											<li>I want to make a build system :)</li>
+										</ul>
+									</p>
+									<p>The solution: <b>sea-crawler</b> - which <strike>generates</strike> <em>will</em> generate a normal JSON file containing all the project information. Maybe I will make it generate <i>make</i> or <i>CMake</i> files in the future, but that's a while away.</p>
+								</li>
+								<li>
+									<label for="proj-battleship"><b><a href="https://github.com/slendersnax/battleship">Battleship</a></b> - complete(ish):</label>
+									<progress id="proj-battleship" max="100" value="99">99%</progress>
+									<p><b>Technologies:</b> C++, SFML</p>
+									<p>I like to make games, although for the moment I don't have any original ones. I do have several (relatively) lightweight clones of popular games, though, all of them in the same state as this one: done, with a few quality-of-life things missing, and in need of code refactoring.</p>
+									<p>Others include:
+										<ul class="classic-ul">
+											<li><a href="https://github.com/slendersnax/arch-minesweeper-sfml">Minesweeper</a> using the same technologies (this one is actually complete)</li>
+											<li><a href="https://github.com/slendersnax/python-2048">2048</a> using Python</li>
+											<li><a href="https://github.com/slendersnax/spider-solitaire-py">Spider Solitaire</a> but in the console, using Python</li>
+										</ul>
+									</p>
+								</li>
+							</ul>
+						</details>
 					</article>
 				</main>
 				<footer>
